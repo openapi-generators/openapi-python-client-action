@@ -1,4 +1,3 @@
 #!/bin/sh -l
 
-ls /github/home
-ls /github/workflow
+python -m pipx run openapi-python-client generate --path $1
