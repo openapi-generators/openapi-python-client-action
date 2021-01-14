@@ -1,0 +1,24 @@
+name: "Generate python client package for openapi spec"
+description: ""
+branding:
+  icon: "target"
+  color: "green"
+
+inputs:
+  openapi-python-client-version:
+    description: "The version of openapi-python-client to use when generating the client package"
+    required: true
+  openapi-file:
+    description: "Path to the openapi spec file (json or yml) to generate a client for"
+    required: true
+  output-path:
+    description: "Path to the parent directory to place the generated client within."
+    required: false
+    default: "."
+  config-file:
+    description: "Path to the config file to be passed along to openapi-python-client"
+    required: false
+
+runs:
+  using: "docker"
+  image: "DockerFile"
