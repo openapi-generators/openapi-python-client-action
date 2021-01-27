@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
+echo $@
+
 openapi_python_client_version = $1
 openapi_file_path = $2
 config_file_path = $3
