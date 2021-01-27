@@ -7,20 +7,21 @@ branding:
 inputs:
   openapi-python-client-version:
     description: "The version of openapi-python-client to use when generating the client package"
-    required: true
-  openapi-file:
-    description: "Path to the openapi spec file (json or yml) to generate a client for"
-    required: true
-  output-path:
-    description: "Path to the parent directory to place the generated client within."
     required: false
-    default: "."
+    default: "latest"
+  openapi-file:
+    description: The path to the openapi document to generate a client library for
+    required: false
+    default: openapi.json
   config-file:
     description: "Path to the config file to be passed along to openapi-python-client"
     required: false
+    default: NOT_SPECIFIED
 
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
+    - ${{ inputs.openapi-python-client-version }}
     - ${{ inputs.openapi-file }}
+    - ${{ inputs.config-file }}
