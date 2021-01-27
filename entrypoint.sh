@@ -4,8 +4,16 @@ openapi_python_client_version=$1
 openapi_file_path=$2
 config_file_path=$3
 
-if [[ "$config_file_path" == "NOT_SPECIFIED" ]]; then
-    pipx run --spec openapi-python-client==${openapi_python_client_version} openapi-python-client generate --path ${openapi_file_path}
+if [[ "$openapi_python_client_version" != "NOT_SPECIFIED" ]]; then
+    version_arg="--spec openapi-python-client==${openapi_python_client_version}"
 else
-    pipx run --spec openapi-python-client==${openapi_python_client_version} openapi-python-client --config ${config_file_path} generate --path ${openapi_file_path}
+    version_arg=""
 fi
+
+if [[ "$config_file_path" != "NOT_SPECIFIED" ]]; then
+    config_arg="--config ${config_file_path}"
+else
+    config_arg=""
+fi
+
+pipx run ${version_arg} openapi-python-client ${config_arg} generate --path ${openapi_file_path}
