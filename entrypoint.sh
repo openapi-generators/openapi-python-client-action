@@ -1,10 +1,8 @@
 #!/bin/sh -l
 
-echo $@
-
-openapi_python_client_version = $1
-openapi_file_path = $2
-config_file_path = $3
+openapi_python_client_version=$1
+openapi_file_path=$2
+config_file_path=$3
 
 pip install openapi-python-client==${openapi_python_client_version}
 
