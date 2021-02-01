@@ -1,15 +1,15 @@
 # openapi-python-client-action
-The official github action for [openapi-python-client](https://github.com/triaxtec/openapi-python-client) - generates a modern python client package from an openapi document
+The official GitHub Action for [openapi-python-client](https://github.com/triaxtec/openapi-python-client) - generates a modern Python client package from an OpenAPI document
 
 ## Inputs
 
 ### `openapi-python-client-version`
 
-The version of the openapi-python-client package to use to generate the python client. If unspecified the latest released version will be used.
+The version of the openapi-python-client package to use. If unspecified the latest released version will be used.
 
 ### `openapi-file`
 
-The path (with respect to the current directory/the workspace) to the openapi document (both json and yaml are supported). Defaults to just "openapi.json" i.e. a file in the current directory called openapi.json.
+The path (with respect to the current directory/the workspace) to the OpenAPI document (both JSON and YAML are supported). Defaults to just "openapi.json" i.e. a file in the current directory called openapi.json.
 
 ### `config-file`
 
