@@ -6,15 +6,19 @@ branding:
 
 inputs:
   openapi-python-client-version:
-    description: "The version of openapi-python-client to use when generating the client package"
+    description: The version of openapi-python-client to use
     required: false
     default: NOT_SPECIFIED
   openapi-file:
-    description: The path to the openapi document to generate a client library for
+    description: The path to the OpenAPI document to generate a client library for e.g. docs/openapi.json
     required: false
     default: openapi.json
+  openapi-url:
+    description: The url of the OpenAPI document to generate a client library for e.g. https://petstore3.swagger.io/api/v3/openapi.json
+    required: false
+    default: NOT_SPECIFIED
   config-file:
-    description: "Path to the config file to be passed along to openapi-python-client"
+    description: Path to the config file to be passed along to openapi-python-client
     required: false
     default: NOT_SPECIFIED
 
@@ -24,4 +28,5 @@ runs:
   args:
     - ${{ inputs.openapi-python-client-version }}
     - ${{ inputs.openapi-file }}
+    - ${{ inputs.openapi-url }}
     - ${{ inputs.config-file }}

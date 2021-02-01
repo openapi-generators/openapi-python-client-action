@@ -11,6 +11,10 @@ The version of the openapi-python-client package to use. If unspecified the late
 
 The path (with respect to the current directory/the workspace) to the OpenAPI document (both JSON and YAML are supported). Defaults to just "openapi.json" i.e. a file in the current directory called openapi.json.
 
+### `openapi-url`
+
+The url of the OpenAPI document. Overrides `openapi-file` - If unspecified the value of the `openapi-file` input (which defaults to just `openapi.json`) will be used to generate the client.
+
 ### `config-file`
 
 The path (with respect to the current directory/the workspace) to the config.yml to be used with openapi-python-client. Configuaration is not required so if this is unspecified then no configuration will be passed along. See [openapi-python-client's README](https://github.com/triaxtec/openapi-python-client#configuration) for available configuration
@@ -37,7 +41,7 @@ jobs:
       # Use the action to generate a client package
       # This uses all defaults (latest version, openapi.json in the current workspace, no configuration)
       - name: Generate Python Client
-        uses: triaxtec/openapi-python-client-action@main
+        uses: triaxtec/openapi-python-client-action@v1
 
       # Do something with the generated client (likely publishing it somewhere)
       # Here we assume that the info/title in the openapi document was "example-project"
