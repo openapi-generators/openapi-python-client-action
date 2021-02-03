@@ -1,4 +1,4 @@
-name: "Generate A Python Client Package From An OpenAPI file"
+name: "Generate Python Client from OpenAPI"
 description: "Generates a Python client package from an OpenAPI document using the openapi-python-client project"
 branding:
   icon: "target"
