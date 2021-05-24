@@ -5,7 +5,7 @@ The official GitHub Action for [openapi-python-client](https://github.com/triaxt
 
 ### `openapi-python-client-version`
 
-The version of the openapi-python-client package to use. If unspecified the latest released version will be used.
+The version of the openapi-python-client package to use. If unspecified the latest released version will be used. **Version 2 of this action only supports version 0.9.0+ of the generator. Use version 1 of this action for older versions of the generator.**
 
 ### `openapi-file`
 
@@ -41,7 +41,7 @@ jobs:
       # Use the action to generate a client package
       # This uses all defaults (latest version, openapi.json in the current workspace, no configuration)
       - name: Generate Python Client
-        uses: triaxtec/openapi-python-client-action@v1
+        uses: triaxtec/openapi-python-client-action@v2
 
       # Do something with the generated client (likely publishing it somewhere)
       # Here we assume that the info/title in the openapi document was "example-project"
