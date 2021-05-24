@@ -22,4 +22,4 @@ if [[ "$openapi_url" != "NOT_SPECIFIED" ]]; then
     openapi_document_path_or_url_arg="--url ${openapi_url}"
 fi
 
-pipx run ${version_arg} openapi-python-client ${config_arg} generate ${openapi_document_path_or_url_arg}
+pipx run ${version_arg} openapi-python-client generate ${config_arg} ${openapi_document_path_or_url_arg}
