@@ -1,5 +1,5 @@
 # openapi-python-client-action
-The official GitHub Action for [openapi-python-client](https://github.com/triaxtec/openapi-python-client) - generates a modern Python client package from an OpenAPI document
+The official GitHub Action for [openapi-python-client](https://github.com/openapi-generators/openapi-python-client) - generates a modern Python client package from an OpenAPI document
 
 ## Inputs
 
@@ -17,7 +17,7 @@ The url of the OpenAPI document. Overrides `openapi-file` - If unspecified the v
 
 ### `config-file`
 
-The path (with respect to the current directory/the workspace) to the config.yml to be used with openapi-python-client. Configuaration is not required so if this is unspecified then no configuration will be passed along. See [openapi-python-client's README](https://github.com/triaxtec/openapi-python-client#configuration) for available configuration
+The path (with respect to the current directory/the workspace) to the config.yml to be used with openapi-python-client. Configuaration is not required so if this is unspecified then no configuration will be passed along. See [openapi-python-client's README](https://github.com/openapi-generators/openapi-python-client#configuration) for available configuration
 
 ## Outputs
 
@@ -41,7 +41,7 @@ jobs:
       # Use the action to generate a client package
       # This uses all defaults (latest version, openapi.json in the current workspace, no configuration)
       - name: Generate Python Client
-        uses: triaxtec/openapi-python-client-action@v2
+        uses: openapi-generators/openapi-python-client-action@v2
 
       # Do something with the generated client (likely publishing it somewhere)
       # Here we assume that the info/title in the openapi document was "example-project"
