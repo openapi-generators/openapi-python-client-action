@@ -24,5 +24,6 @@ if [[ "$openapi_url" != "NOT_SPECIFIED" ]]; then
     openapi_document_path_or_url_arg="--url=${openapi_url}"
 fi
 
-pipx install "${version_arg}" --include-deps
+PATH=$PATH:/github/home/.local/bin
+pip install "${version_arg}"
 openapi-python-client generate ${config_arg} ${openapi_document_path_or_url_arg}
