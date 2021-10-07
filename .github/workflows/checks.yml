@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: openapi-generators/openapi-python-client-action@updates
+      - uses: openapi-generators/openapi-python-client-action@v2
         with:
           openapi-url: https://raw.githubusercontent.com/openapi-generators/openapi-python-client/main/end_to_end_tests/openapi.json
