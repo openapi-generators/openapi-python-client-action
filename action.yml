@@ -21,6 +21,10 @@ inputs:
     description: Path to the config file to be passed along to openapi-python-client
     required: false
     default: NOT_SPECIFIED
+  extra-args:
+    description: Any additional arguments to forward to openapi-python-client
+    required: false
+    default: ""
 
 runs:
   using: "docker"
@@ -30,3 +34,4 @@ runs:
     - ${{ inputs.openapi-file }}
     - ${{ inputs.openapi-url }}
     - ${{ inputs.config-file }}
+    - ${{ inputs.extra-args }}

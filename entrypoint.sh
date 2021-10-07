@@ -6,6 +6,7 @@ openapi_python_client_version=$1
 openapi_file_path=$2
 openapi_url=$3
 config_file_path=$4
+extra_args=$5
 
 if [[ "$openapi_python_client_version" != "NOT_SPECIFIED" ]]; then
     version_arg="openapi-python-client==${openapi_python_client_version}"
@@ -26,4 +27,5 @@ fi
 
 PATH=$PATH:/github/home/.local/bin
 pip install "${version_arg}"
-openapi-python-client generate ${config_arg} ${openapi_document_path_or_url_arg}
+# shellcheck disable=SC2086
+openapi-python-client generate $config_arg $openapi_document_path_or_url_arg $extra_args

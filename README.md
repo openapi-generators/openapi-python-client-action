@@ -19,6 +19,10 @@ The url of the OpenAPI document. Overrides `openapi-file` - If unspecified the v
 
 The path (with respect to the current directory/the workspace) to the config.yml to be used with openapi-python-client. Configuaration is not required so if this is unspecified then no configuration will be passed along. See [openapi-python-client's README](https://github.com/openapi-generators/openapi-python-client#configuration) for available configuration
 
+### `extra-args`
+
+This is a catch-all to allow you to pass additional arguments to `openapi-python-client`.
+
 ## Outputs
 
 No outputs are returned.
