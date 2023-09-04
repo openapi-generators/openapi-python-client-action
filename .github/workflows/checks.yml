@@ -7,7 +7,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
       - uses: openapi-generators/openapi-python-client-action@v2
         with:
           openapi-url: https://raw.githubusercontent.com/openapi-generators/openapi-python-client/main/end_to_end_tests/openapi.json
